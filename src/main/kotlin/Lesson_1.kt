@@ -2,14 +2,14 @@ package org.example
 
 fun main() {
 
-    var numberOfOrders: Int = 42
+    var ordersAmount: Int = 42
     val welcomeMessage: String = "Welcome to our app!"
 
-    println(numberOfOrders)
+    println(ordersAmount)
     println(welcomeMessage)
 
-    numberOfOrders = 52
-    println(numberOfOrders)
+    ordersAmount = 52
+    println(ordersAmount)
 
     // целочисленные: Int, Long (64 bit), Short, Byte (8 bit)
     // целочисленные положительные: UInt
