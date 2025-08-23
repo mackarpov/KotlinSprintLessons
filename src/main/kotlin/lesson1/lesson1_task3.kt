@@ -1,7 +1,5 @@
 package org.example.lesson1
 
-import kotlin.math.min
-
 fun main() {
 
     val year: String = "1961"
@@ -15,7 +13,5 @@ fun main() {
     hour = "10"
     minute = "55"
 
-    print(hour)
-    print(":")
-    print(minute)
+    println("$hour:$minute")
 }
