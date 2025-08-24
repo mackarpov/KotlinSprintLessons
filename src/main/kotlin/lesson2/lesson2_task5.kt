@@ -9,5 +9,5 @@ fun main() {
     val depositAmount = 70000
     val totalAmount = depositAmount * (1 + interestRate / 100).pow(years)
 
-    println((totalAmount * 1000).roundToInt() / 1000.0)
+    println("%.3f".format(totalAmount))
 }
