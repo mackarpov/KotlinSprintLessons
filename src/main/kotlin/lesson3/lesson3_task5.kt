@@ -3,9 +3,10 @@ package org.example.lesson3
 fun main() {
 
     val chessRecord = "D2-D4;0"
-    val cellFrom = chessRecord.split('-', ';')[0]
-    val cellTo = chessRecord.split('-', ';')[1]
-    val moveNumber = chessRecord.split('-', ';')[2]
+    val splittedChessRecord = chessRecord.split('-', ';')
+    val cellFrom = splittedChessRecord[0]
+    val cellTo = splittedChessRecord[1]
+    val moveNumber = splittedChessRecord[2]
 
     println(cellFrom)
     println(cellTo)
