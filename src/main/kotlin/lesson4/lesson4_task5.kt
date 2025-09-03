@@ -21,14 +21,14 @@ fun main() {
 
     val result =
         ("${
-            ((shipHasDamages == false &&
+            ((shipHasDamages == SHIP_HAS_DAMAGES &&
                     amountOfCrewOnBoard in MINIMUM_CREW..MAXIMUM_CREW &&
                     amountOfProvisions > MINIMUM_PROVISIONS &&
-                    (goodWeather == true || goodWeather == false)) ||
-                    (shipHasDamages == true &&
+                    (goodWeather == GOOD_WEATHER || goodWeather == !GOOD_WEATHER)) ||
+                    (shipHasDamages == !SHIP_HAS_DAMAGES &&
                             amountOfCrewOnBoard == MAXIMUM_CREW &&
                             amountOfProvisions >= MINIMUM_PROVISIONS &&
-                            goodWeather == true))
+                            goodWeather == GOOD_WEATHER))
         }")
 
     println("Корабль может приступить к долгосрочному плаванию: $result")
@@ -37,4 +37,5 @@ fun main() {
 const val MINIMUM_CREW = 55
 const val MAXIMUM_CREW = 70
 const val MINIMUM_PROVISIONS = 50
-
+const val SHIP_HAS_DAMAGES = false
+const val GOOD_WEATHER = true
