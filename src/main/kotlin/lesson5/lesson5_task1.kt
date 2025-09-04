@@ -2,15 +2,17 @@ package org.example.lesson5
 
 fun main() {
 
-    print("Для авторизации сложите два числа: 22 и 33. Введите ответ: ")
+    println("Для авторизации сложите два числа: $FIRST_DIGIT и $SECOND_DIGIT.")
+    print("Введите ответ: ")
 
     val userAnswer = readln().toInt()
 
-    if (userAnswer == CORRECT_ANSWER) {
+    if (userAnswer == FIRST_DIGIT + SECOND_DIGIT) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
     }
 }
 
-const val CORRECT_ANSWER = 55
+const val FIRST_DIGIT = 22
+const val SECOND_DIGIT = 33
