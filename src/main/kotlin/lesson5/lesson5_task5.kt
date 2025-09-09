@@ -1,16 +1,14 @@
 package org.example.lesson5
 
-import kotlin.random.Random
-
 fun main() {
 
     val userListOfNumbers = mutableListOf<Int>()
-    val mysteriousNumbers = IntArray(3) { Random.nextInt(43) }.asList()
+    val mysteriousNumbers = (MINIMUM_DIGIT..MAXIMUM_DIGIT).shuffled().take(3)
 
-    println("Для победы вам надо угадать три числа в диапазоне от 0 до 42")
+    println("Для победы вам надо угадать 3 числа в диапазоне от $MINIMUM_DIGIT до $MAXIMUM_DIGIT")
 
     for (i in 1..3){
-        print("Введите $i-е число в диапазоне от 0 до 42: ")
+        print("Введите $i-е число в диапазоне от $MINIMUM_DIGIT до $MAXIMUM_DIGIT: ")
         userListOfNumbers.add(readln().toInt())
     }
 
@@ -29,3 +27,6 @@ fun main() {
         print("$number ")
     }
 }
+
+const val MINIMUM_DIGIT = 0
+const val MAXIMUM_DIGIT = 42
