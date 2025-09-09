@@ -1,6 +1,6 @@
 package org.example.lesson5
 
-import kotlin.math.*
+import kotlin.math.pow
 
 fun main() {
 
@@ -13,13 +13,13 @@ fun main() {
     val indexBMI = userWeight / userHeight.pow(EXPONENT)
 
     val weightCategory = when{
-        indexBMI < 18.5 -> "Недостаточная масса тела"
-        indexBMI >= 18.5 && indexBMI < 25 -> "Нормальная масса тела"
-        indexBMI >= 25 && indexBMI < 30 ->"Избыточная масса тела"
-        else -> "Ожирение"
+        indexBMI >= 30 -> "Ожирение"
+        indexBMI >= 25 ->"Избыточная масса тела"
+        indexBMI >= 18.5 -> "Нормальная масса тела"
+        else -> "Недостаточная масса тела"
     }
 
-    println("ИМТ = ${String.format("%.2f", indexBMI)}. $weightCategory")
+    println("ИМТ = ${String.format("%.2f", indexBMI)} - $weightCategory")
 }
 
 const val EXPONENT = 2
