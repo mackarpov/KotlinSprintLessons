@@ -23,7 +23,7 @@ fun main() {
 
 }
 
-const val MINIMUM_DIGIT = 0
-const val MAXIMUM_DIGIT = 42
+private const val MINIMUM_DIGIT = 0
+private const val MAXIMUM_DIGIT = 42
 const val FIRST_CORRECT_NUMBER = 7
 const val SECOND_CORRECT_NUMBER = 36
