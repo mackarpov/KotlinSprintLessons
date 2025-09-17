@@ -23,7 +23,7 @@ fun main() {
     println("Было загадано число: $HIDDEN_NUMBER")
 }
 
-private const val MINIMUM_DIGIT = 1
-private const val MAXIMUM_DIGIT = 9
+const val MINIMUM_DIGIT = 1
+const val MAXIMUM_DIGIT = 9
 private const val HIDDEN_NUMBER = 2
 
