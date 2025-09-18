@@ -7,11 +7,11 @@ fun main() {
     print("Какой ингредиент вы хотите найти? ")
     val userIngredient = readln()
 
-    for (i in arrayOfIngredients){
-        if (userIngredient == i) {
-            println("Ингредиент [$userIngredient] в рецепте есть")
-            return
-        }
+    if (userIngredient in arrayOfIngredients) {
+        println("Ингредиент [$userIngredient] в рецепте есть")
+        return
+    } else {
+        println("Такого ингредиента в рецепте нет")
     }
-    println("Такого ингредиента в рецепте нет")
+
 }
