@@ -10,13 +10,15 @@ fun main() {
     print("Введите пароль: ")
     val password = readln()
 
-    checkingTheLength(login, password)
-}
-
-fun checkingTheLength(login: String, password: String) {
-    if (login.length < 4 || password.length < 4) {
-        println("Логин или пароль недостаточно длинные!")
-    } else {
+    if (checkTheLength(login, password)) {
         println("Добро пожаловать!")
+    } else {
+        println("Логин или пароль недостаточно длинные!")
     }
 }
+
+fun checkTheLength(login: String, password: String): Boolean {
+    return login.length >= NUMBER_OF_SYMBOLS && password.length >= NUMBER_OF_SYMBOLS
+}
+
+const val NUMBER_OF_SYMBOLS = 4
